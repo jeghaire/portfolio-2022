@@ -19,6 +19,7 @@ export default function Navbar() {
           width={100}
           objectFit="contain"
           className="m-0 p-0"
+          alt=""
         />
       </div>
       <ul className="hidden md:flex items-center ml-auto">

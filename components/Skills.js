@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 // import ReactTooltip from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../wrappers'
@@ -40,7 +41,7 @@ const Skills = () => {
                 className="flex items-center justify-center rounded-full border shadow-lg w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] 2xl:w-[120px] 2xl:h-[120px]"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} className="w-1/2 h-1/2" />
+                <Image src={urlFor(skill.icon)} alt={skill.name} className="w-1/2 h-1/2" />
               </div>
               <p className="text-[0.8rem] font-bold mt-1 text-left text-base-dark-gray 2xl:text-[1.75rem] 2xl:mt-2">{skill.name}</p>
             </motion.div>
@@ -69,14 +70,14 @@ const Skills = () => {
                       <h4 className="text-[0.9rem] sm:text-base 2xl:text-[2rem] text-left text-base-dark">{work.name}</h4>
                       <p className="text-[0.8rem] text-left 2xl:text-[1.75rem] text-base-dark-gray mt-[5px]">{work.company}</p>
                     </motion.div>
-                    <ReactTooltip
+                    {/* <ReactTooltip
                       id={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
                       {work.desc}
-                    </ReactTooltip>
+                    </ReactTooltip> */}
                   </>
                 ))}
               </motion.div>

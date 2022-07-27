@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import Image from 'next/image'
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../wrappers';
@@ -61,7 +62,7 @@ const Projects = () => {
             <div
               className="relative flex items-center justify-center w-full h-[230px] 2xl:h-[350px]"
             >
-              <img src={urlFor(work.imgUrl)} alt={work.name} className="h-full w-full h-76 w-76 rounded-xl object-cover" />
+              <Image src={urlFor(work.imgUrl)} alt={work.name} className="h-full w-full h-76 w-76 rounded-xl object-cover" />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

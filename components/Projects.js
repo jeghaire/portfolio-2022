@@ -57,12 +57,16 @@ const Projects = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="flex flex-wrap items-center justify-center"
       >
+        {filterWork.map((work) => {
+          console.log(urlFor(work.imgUrl))
+        })}
+
         {filterWork.map((work, index) => (
           <div className="w-[270px] flex-col m-4 p-3 rounded-xl shadow bg-white text-black cursor-pointer transition-all duration-300 ease flex items-center justify-center" key={index}>
             <div
               className="relative flex items-center justify-center w-full h-[230px] 2xl:h-[350px]"
             >
-              <Image src={urlFor(work.imgUrl)} alt={work.name} className="h-full w-full h-76 w-76 rounded-xl object-cover" />
+              <img src={urlFor(work.imgUrl)} alt={work.name} className="h-full w-full h-76 w-76 rounded-xl object-cover" />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

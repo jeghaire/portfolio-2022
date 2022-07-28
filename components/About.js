@@ -32,7 +32,7 @@ function About() {
             transition={{ duration: 0.5, type: 'tween' }}
             className="flex flex-col justify-start items-start m-4 pb-3 w-[250px] 2xl:w-[420px] 2xl:my-4 2xl:mx-6 hover:translate-y-12"
           >
-            <Image alt="" src={urlFor(about.imgUrl)} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" className="object-cover w-full rounded-lg" />
+            {/* <Image alt="" src={urlFor(about.imgUrl)} layout="responsive" sizes="(max-width: 800px) 100vw, 800px" className="object-cover w-full rounded-lg" /> */}
             <h2 className="font-bold text-lg 2xl:text-3xl text-left text-base-dark mt-3 mb-0">{about.title}</h2>
             <p className="text-sm 2xl:text-xl text-left text-base-dark-gray">{about.description}</p>
           </motion.div>

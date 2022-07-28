@@ -41,7 +41,7 @@ const Skills = () => {
                 className="flex items-center justify-center rounded-full border shadow-lg w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] 2xl:w-[120px] 2xl:h-[120px]"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                {/* <Image src={urlFor(skill.icon)} alt={skill.name} className="w-1/2 h-1/2" /> */}
+                <img src={urlFor(skill.icon)} alt={skill.name} className="w-1/2 h-1/2" />
               </div>
               <p className="text-[0.8rem] font-bold mt-1 text-left text-base-dark-gray 2xl:text-[1.75rem] 2xl:mt-2">{skill.name}</p>
             </motion.div>

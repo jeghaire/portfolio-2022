@@ -57,10 +57,6 @@ const Projects = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="flex flex-wrap items-center justify-center"
       >
-        {filterWork.map((work) => {
-          console.log(urlFor(work.imgUrl))
-        })}
-
         {filterWork.map((work, index) => (
           <div className="w-[270px] flex-col m-4 p-3 rounded-xl shadow bg-white text-black cursor-pointer transition-all duration-300 ease flex items-center justify-center" key={index}>
             <div

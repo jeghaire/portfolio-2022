@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { urlFor, configuredSanityClient } from '../sanity/client'
 import { AppWrap, MotionWrap } from '../wrappers'
-import Image from 'next/image'
 
 // const abouts = [
 //   { title: 'Web Development', desc: 'I love what I do. Inspiration from my world.', imgUrl: images.about01 },
@@ -20,7 +19,7 @@ function About() {
   }, [])
 
   return (
-    <section className="py-10 md:py-32">
+    <section className="flex flex-col justify-center items-center py-24 px-2">
       <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">I know that <span className="ml-2 text-base-accent">Good Design</span><br /> Means <span className="ml-2 text-base-accent"> Good Business</span></h1>
 
       <div className="flex flex-wrap justify-center items-start mt-4">

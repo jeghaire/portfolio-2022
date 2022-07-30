@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 // import ReactTooltip from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../wrappers'
@@ -24,7 +23,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="">
+    <section>
       <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Skills <span className="text-base-accent">&</span> Experiences</h1>
 
 
@@ -70,14 +69,14 @@ const Skills = () => {
                       <h4 className="text-[0.9rem] sm:text-base 2xl:text-[2rem] text-left text-base-dark">{work.name}</h4>
                       <p className="text-[0.8rem] text-left 2xl:text-[1.75rem] text-base-dark-gray mt-[5px]">{work.company}</p>
                     </motion.div>
-                    {/* <ReactTooltip
+                    <ReactTooltip
                       id={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
                       {work.desc}
-                    </ReactTooltip> */}
+                    </ReactTooltip>
                   </>
                 ))}
               </motion.div>

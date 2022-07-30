@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
-import Image from 'next/image'
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../wrappers';
@@ -37,7 +36,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-10 md:py-32">
+    <section className="flex flex-col justify-center items-center py-24 px-2">
       <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">My Creative <span className="text-base-accent">Portfolio</span> Section</h1>
 
       <div className="flex flex-row justify-center items-center flex-wrap m-0 mt-12 mb-3">

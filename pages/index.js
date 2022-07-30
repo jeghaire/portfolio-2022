@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { Header, About, Projects, Skills, Footer, Navbar } from '../components'
-// import { configuredSanityClient } from '../sanity/client'
+import { Header, About, Projects, Skills, Footer, Navbar, Experience } from '../components'
 
 export default function Home() {
   return (
@@ -14,14 +13,9 @@ export default function Home() {
       <Header />
       <About />
       <Projects />
-      <Skills />
+      {/* <Skills /> */}
+      <Experience />
       <Footer />
     </>
   )
 }
-
-// export const getServerSideProps = async function () {
-//   const query = '*[_type=="abouts"]{_id, description, title, imgUrl}'
-//   const abouts = await configuredSanityClient.fetch(query)
-//   return { props: { abouts } }
-// }

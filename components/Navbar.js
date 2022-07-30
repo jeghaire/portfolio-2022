@@ -11,12 +11,13 @@ export default function Navbar() {
   const [toggled, setToggled] = useState(false)
 
   return (
-    <nav className="flex items-center py-6 px-6 md:px-32 border-b border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100]">
+    <nav className="flex items-center py-6 px-5 md:px-32 border-b border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100]">
       <div className="relative flex items-start justify-start w-fit p-0">
         <Image
+          priority
           src={images.dev}
           height={30}
-          width={100}
+          width={50}
           objectFit="contain"
           className="m-0 p-0"
           alt=""
@@ -38,9 +39,9 @@ export default function Navbar() {
         {toggled && (
           <>
             <motion.div
-              whileInView={{ x: [300, 0] }}
+              whileInView={{ x: [30, 0] }}
               transition={{ duration: 0.85, ease: 'easeOut' }}
-              className="fixed top-0 right-0 bottom-0 z-2000 p-3 w-9/12 h-screen items-end bg-white bg-[url('/images/bgWhite.png')] bg-cover bg-repeat shadow-lg"
+              className="fixed top-0 right-0 bottom-0 z-[1000] p-3 w-9/12 h-screen items-end bg-white bg-[url('/images/bgWhite.png')] bg-cover bg-repeat shadow-lg"
             >
               <ul className="h-full w-full flex flex-col">
                 <HiX onClick={() => setToggled(false)} className="justify-self-center text-base-accent h-6 w-6 ml-auto mt-6 mb-8" />

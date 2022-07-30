@@ -36,37 +36,36 @@ const Footer = () => {
   }
 
   return (
-    <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
-
-      <div className="app__footer-cards">
-        <div className="app__footer-card ">
-          <Image src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">hello@micael.com</a>
+    <section className="flex flex-col justify-center items-center py-24 px-2">
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Take a coffee <span className="text-base-accent">&</span> chat with me</h1>
+      <div className="w-4/6 flex justify-space evenly items-center flex-wrap m-4 mt-6">
+        <div className="w-full ssm:min-w-[300px] flex flex-row justify-start items-center m-0 my-2 p-2 rounded-sm  cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out hover:shadow-sm">
+          <img className="w-[40px] h-[40px] m-0 mx-[0.7rem]" src={images.email} alt="email" />
+          <a href="mailto:jomavix@hotmail.com" className="text-sm text-left text-base-dark-gray leading-tight 2xl:text-base font-medium">jomavix@hotmail.com</a>
         </div>
-        <div className="app__footer-card">
-          <Image src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">+1 (123) 456-7890</a>
+        <div className="w-full ssm:min-w-[300px] flex flex-row justify-start items-center m-0 my-2 p-2 rounded-sm cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out hover:shadow-sm">
+          <img className="w-[40px] h-[40px] m-0 mx-[0.7rem]" src={images.mobile} alt="phone" />
+          <a href="tel:+(234) 810 540 0295" className="text-sm text-left text-base-dark-gray leading-tight 2xl:text-base font-medium">+(234) 810 540 0295</a>
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
-          <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+        <div className="w-[60%] flex-col my-2 mx-4 flex items-center justify-center">
+          <div className="flex items-center justify-center w-full m-0 my-[0.75rem] cursor-pointer rounded-sm bg-base-primary transition-all duration-300 ease-in-out">
+            <input className="text-sm text-left text-base-dark-gray leading-tight 2xl:text-base w-full p-1.5 border-none rounded-xs bg-white px-3 py-4 text-sans text-black outline-none" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
           </div>
-          <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+          <div className="flex items-center justify-center w-full m-0 my-[0.75rem] cursor-pointer rounded-sm bg-base-primary transition-all duration-300 ease-in-out">
+            <input className="text-sm text-left text-base-dark-gray leading-tight 2xl:text-base w-full p-1.5 border-none rounded-xs bg-white px-3 py-4 text-sans text-black outline-none" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
           </div>
-          <div>
+          <div className="w-full m-0 my-[0.75rem] cursor-pointer rounded-sm bg-base-primary transition-all duration-300 ease-in-out">
             <textarea
-              className="p-text"
+              className="text-sm text-left text-base-dark-gray leading-tight 2xl:text-base h-[170px] w-full border-none rounded-xs bg-white px-3 py-4 text-sans text-black outline-none"
               placeholder="Your Message"
               value={message}
               name="message"
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" className="m-0 mt-12 py-5 px-9 rounded-full bg-base-accent p-0 text-white tracking-widest hover:shadow-sm shadow-xl transition duration-300 outline-none ease-in-out" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
       ) : (
           <div>
@@ -75,7 +74,7 @@ const Footer = () => {
           </h3>
           </div>
         )}
-    </>
+    </section>
   )
 }
 export default AppWrap(

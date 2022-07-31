@@ -75,7 +75,7 @@ function Experience() {
 
   return (
     <section className="flex flex-col justify-center items-center py-24 px-2">
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Where <span className="text-base-accent">I've</span> Worked</h1>
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Where <span className="text-base-accent">I&#39;ve</span> Worked</h1>
       <div className="w-[90%] md:w-[80%] mt-[3rem] flex flex-row xl:w-full xl:flex-col mx-auto">
         <div className="w-full max-w-lg">
           <Tab.Group>

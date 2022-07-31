@@ -26,7 +26,7 @@ function Header() {
           <div className="py-4 px-4 bg-white rounded-lg flex-row w-auto shadow-sm flex items-center justify-center">
             <span className="text-base-accent text-2xl">😉</span>
             <div className="ml-2 mr-1">
-              <p className="text-left text-base-dark-gray text-sm 2xl:text-2xl uppercase leading-6">Hello I'm</p>
+              <p className="text-left text-base-dark-gray text-sm 2xl:text-2xl uppercase leading-6">Hello I&#39;m</p>
               <h1 className="font-bold mt-2 text-base-dark text-3xl text-center leading-6">Mavi</h1>
             </div>
           </div>

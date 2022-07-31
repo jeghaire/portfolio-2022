@@ -19,3 +19,7 @@ function SocialMediaIcons() {
 }
 
 export default SocialMediaIcons
+
+// https://twitter.com/kngMavi
+// https://github.com/jeghaire
+// * Add Linkedin

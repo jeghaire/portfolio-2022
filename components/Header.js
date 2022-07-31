@@ -16,7 +16,7 @@ const scaleVariants = {
 
 function Header() {
   return (
-    <div className="flex items-center justify-center flex-1 w-full h-full flex-col md:flex-row  bg-[url('/images/bgIMG.png')] bg-cover bg-repeat bg-center">
+    <section className="flex items-center justify-center flex-1 w-full h-full flex-col md:flex-row  bg-[url('/images/bgIMG.png')] bg-cover bg-repeat bg-center">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -42,7 +42,7 @@ function Header() {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="flex flex-1 h-full items-end justify-end relative"
       >
-        <Image alt="" src={images.profile} className="w-full object-contain z-[1]" />
+        {/* <Image alt="" src={images.profile} className="w-full object-contain z-[1]" /> */}
         <motion.div
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
@@ -61,7 +61,7 @@ function Header() {
           </div>
         ))}
       </motion.div>
-    </div>
+    </section>
   )
 }
 

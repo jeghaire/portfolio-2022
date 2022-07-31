@@ -12,17 +12,20 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center py-6 px-5 md:px-32 border-b border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100]">
-      <div className="relative flex items-start justify-start w-fit p-0">
-        <Image
-          priority
-          src={images.dev}
-          height={30}
-          width={50}
-          objectFit="contain"
-          className="m-0 p-0"
-          alt=""
-        />
-      </div>
+      <Link href="/">
+        <a className="relative flex items-start justify-start w-fit p-0">
+          <Image
+            priority
+            src={images.dev}
+            height={30}
+            width={50}
+            objectFit="contain"
+            className="m-0 p-0"
+            alt=""
+            onClick={() => setToggled(false)}
+          />
+        </a>
+      </Link>
       <ul className="hidden md:flex items-center ml-auto">
         {navMenuOptions.map(item => (
           <li key={`link-${item}`} className="ml-5">

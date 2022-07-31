@@ -20,7 +20,7 @@ function About() {
 
   return (
     <section className="flex flex-col justify-center items-center py-24 px-2">
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">I know that <span className="ml-2 text-base-accent">Good Design</span><br /> Means <span className="ml-2 text-base-accent"> Good Business</span></h1>
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">I know that <span className="text-base-accent block sm:inline">Good Design</span><br className="hidden sm:block" /> Means <span className="text-base-accent block sm:inline"> Good Business</span></h1>
 
       <div className="flex flex-wrap justify-center items-start mt-4">
         {abouts && abouts.map(about => (

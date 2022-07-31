@@ -37,13 +37,13 @@ const Footer = () => {
 
   return (
     <section className="flex flex-col justify-center items-center py-24 px-2">
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Take a coffee <span className="text-base-accent">&</span> chat with me</h1>
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Take a coffee <span className="text-base-accent block sm:inline">&</span> chat with me</h1>
       <div className="w-[80%] sm:w-[60%] flex justify-evenly items-center flex-wrap m-4 mt-6">
-        <div className="w-full ssm:min-w-[300px] flex flex-row justify-start items-center m-0 my-2 p-2 rounded-sm  cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out hover:shadow-sm">
+        <div className="w-full sm:min-w-[300px] flex flex-row justify-start items-center m-0 my-2 p-2 rounded-sm  cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out hover:shadow-sm">
           <Image width={40} height={40} src={images.email} alt="email" />
           <a href="mailto:jomavix@hotmail.com" className="ml-5 text-sm text-left text-zinc-600 tracking-widest 2xl:text-base font-bold">jomavix@hotmail.com</a>
         </div>
-        <div className="w-full ssm:min-w-[300px] flex flex-row justify-start items-center m-0 my-2 p-2 rounded-sm cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out hover:shadow-sm">
+        <div className="w-full sm:min-w-[300px] flex flex-row justify-start items-center m-0 my-2 p-2 rounded-sm cursor-pointer bg-[#fef4f5] transition-all duration-300 ease-in-out hover:shadow-sm">
           <Image width={40} height={40} src={images.mobile} alt="phone" />
           <a href="tel:+(234) 810 540 0295" className="ml-4 text-sm text-left text-zinc-600 leading-tight 2xl:text-base font-bold">+(234) 810 540 0295</a>
         </div>

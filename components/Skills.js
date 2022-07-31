@@ -24,7 +24,7 @@ const Skills = () => {
 
   return (
     <section>
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Skills <span className="text-base-accent">&</span> Experiences</h1>
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Skills <span className="text-base-accent block sm:inline">&</span> Experiences</h1>
 
 
       <div className="w-[80%] mt-[3rem] flex flex-row xl:w-full xl:flex-col">

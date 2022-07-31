@@ -42,7 +42,7 @@ function Header() {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="flex flex-1 h-full items-end justify-end relative"
       >
-        {/* <Image alt="" src={images.profile} className="w-full object-contain z-[1]" /> */}
+        <Image alt="" src={images.profile} className="w-full object-contain z-[1]" />
         <motion.div
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}

@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
@@ -19,11 +19,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: [
-          // 'Poppins',
-          'PT sans',
-          ...defaultTheme.fontFamily.sans,
-        ],
+        sans: ['PT sans', ...fontFamily.sans],
+        mono: ['Fira Code', ...fontFamily.mono],
+        serif: ['Cooper Std', ...fontFamily.serif],
+        cursive: ['Signerica Medium', 'sans']
       }
     },
   },

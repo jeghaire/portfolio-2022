@@ -8,62 +8,63 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0KExQ.woff2) format('woff2');
+    src: url(/fonts/jizaRExUiTo99u79D0KExQ.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/jizfRExUiTo99u79B_mh0O6tLQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
   @font-face {
     font-family: 'Signerica Medium';
     font-style: normal;
     font-weight: 400;
-    src: local('Signerica Medium'), url('https://fonts.cdnfonts.com/s/25936/Signerica_Medium.woff') format('woff');
+    src: local('Signerica Medium'), url('/fonts/Signerica_Medium.woff') format('woff');
   }
+
+  @font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/uU9NCBsR6Z2vfE9aq3bh3dSD.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
   @font-face {
     font-family: 'Cooper Std';
     font-style: normal;
     font-weight: 900;
-    src: local('Cooper Std'), url('https://fonts.cdnfonts.com/s/14431/CooperBlack-Std.woff') format('woff');
+    src: local('Cooper Std'), url('/fonts/CooperBlack-Std.woff') format('woff');
+  }
+
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
   }
 
   body {
-    /* background-color: var(--clr-primary); */
-    @apply bg-base-primary;
-    font-family: 'PT Sans', sans-serif;
+    @apply bg-white font-sans;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1 {
-    /* font-family: 'Cooper black'; */
-    font-family: 'Cooper Std', sans-serif;
+    @apply font-serif;
+  }
+
+  header {
+    @apply min-h-[88vh];
   }
 
   section {
     @apply min-h-screen;
   }
 }
-
-.skills-tooltip {
-  max-width: 300px !important;
-  background-color: var(--white-color) !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 5px !important;
-  padding: 1rem !important;
-  color: var(--gray-color) !important;
-  text-align: center !important;
-  line-height: 1.5 !important;
-  opacity: 1 !important;
-
-  @media screen and (min-width: 2000px) {
-    font-size: 1.75rem !important;
-    max-width: 500px !important;
-    line-height: 2 !important;
-  }
-}
-
-/* :root {
-    --clr-primary: #edf2f8;
-    --clr-secondary: #313bac;
-    --clr-black: #030303;
-    --clr-lightGray: #e4e4e4;
-    --clr-gray: #6b7688;
-    --clr-brown: #46364a;
-    --clr-white: #ffffff;
-  } */

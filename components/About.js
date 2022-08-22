@@ -3,13 +3,6 @@ import { motion } from 'framer-motion'
 import { urlFor, configuredSanityClient } from '../sanity/client'
 import { AppWrap, MotionWrap } from '../wrappers'
 
-// const abouts = [
-//   { title: 'Web Development', desc: 'I love what I do. Inspiration from my world.', imgUrl: images.about01 },
-//   { title: 'Fullstack Developer', desc: 'I love what I do. Inspiration from my world.', imgUrl: images.about02 },
-//   { title: 'UI/UX', desc: 'I love what I do. Inspiration from my world.', imgUrl: images.about03 },
-//   { title: 'Motion Designer', desc: 'I love what I do. Inspiration from my world.', imgUrl: images.about04 }
-// ]
-
 function About() {
   const [abouts, setAbouts] = useState([])
 
@@ -20,7 +13,8 @@ function About() {
 
   return (
     <section className="flex flex-col justify-center items-center py-24 px-2">
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">I know that <span className="text-base-accent block sm:inline">Good Design</span><br className="hidden sm:block" /> Means <span className="text-base-accent block sm:inline"> Good Business</span></h1>
+      {/* <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">I know that <span className="text-base-accent block sm:inline">Good Design</span><br className="hidden sm:block" /> Means <span className="text-base-accent block sm:inline"> Good Business</span></h1> */}
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Intensity <span className="text-base-accent block sm:inline">over</span> Extensity</h1>
 
       <div className="flex flex-wrap justify-center items-start mt-4">
         {abouts && abouts.map(about => (
@@ -44,5 +38,5 @@ function About() {
 export default AppWrap(
   MotionWrap(About, 'flex-1 flex-col w-full'),
   'about',
-  'bg-white',
+  'bg-base-primary',
 )

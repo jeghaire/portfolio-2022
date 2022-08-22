@@ -36,15 +36,15 @@ const Projects = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center py-24 px-2">
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">My Creative <span className="text-base-accent block sm:inline">Portfolio</span> Section</h1>
+    <section className="flex flex-col items-center py-32 px-2">
+      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">My <span className="text-base-accent block sm:inline">Projects</span></h1>
 
       <div className="flex flex-row justify-center items-center flex-wrap m-0 mt-12 mb-3">
         {['All', 'UI/UX', 'Web App', 'Mobile App', 'React JS', 'Next.js'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
-            className={`py-2.5 px-4 rounded-lg bg-white border text-black cursor-pointer transition-all duration-300 ease m-1 2xl:py-2 px-4 rounded-lg flex items-center justify-center text-xs text-left text-base-dark-gray 2xl:text-sm hover:ring-1 hover:ring-offset-0 hover:ring-base-secondary ${activeFilter === item ? 'bg-base-secondary text-[#fff] font-bold tracking-wide ring-1 ring-offset-0 ring-base-secondary' : ''}`}
+            className={`py-2.5 px-4 rounded-lg bg-white border text-black cursor-pointer transition-all duration-300 ease m-1 2xl:py-2 px-4 rounded-lg flex items-center justify-center text-xs text-left text-base-dark-gray 2xl:text-sm hover:ring-1 hover:ring-offset-0 hover:ring-base-secondary ${activeFilter === item ? 'bg-base-secondary text-white font-bold tracking-wide ring-1 ring-offset-0 ring-base-secondary' : ''}`}
           >
             {item}
           </div>
@@ -109,6 +109,6 @@ const Projects = () => {
 
 export default AppWrap(
   MotionWrap(Projects, 'flex-1 flex-col w-full'),
-  'work',
+  'projects',
   'bg-base-primary',
 )

@@ -3,15 +3,31 @@ import Link from 'next/link'
 import { images } from '../constants'
 import { BiMenu, BiX } from 'react-icons/bi'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const navMenuOptions = ['about', 'projects', 'experience', 'contact']
 
 export default function Navbar() {
   const [toggled, setToggled] = useState(false)
+  const [colorChange, setColorchange] = useState(false)
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 50) {
+      setColorchange(true);
+    }
+    else {
+      setColorchange(false);
+    }
+  };
+
+  useEffect(() => {
+    const navbarChange = window.addEventListener('scroll', changeNavbarColor)
+    return () => window.removeEventListener('scroll', navbarChange)
+
+  }, [])
 
   return (
-    <nav className="flex items-center py-5 px-5 md:px-28 shadow-sm border-b border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100]">
+    <nav className={`flex items-center py-5 px-5 md:px-28 border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100] ${colorChange && 'shadow-sm border-b'}`}>
       <Link href="/">
         <a className="relative h-8 w-20 md:h-8 md:w-32 flex items-center outline-none">
           <Image

@@ -22,7 +22,7 @@ function About() {
       <p className="text-6xl md:text-8xl max-w-3xl leading-none mt-3 text-center text-base-dark/75 uppercase font-bold font-display">I create beautiful things</p>
 
       <h1 className="font-display text-black text-7xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 md:leading-tight">I create beautiful things</h1>
-      <button className="text-md text-purple-500 max-w-[170px] outline-none font-semibold bg-white px-8 py-3 shadow-md rounded-full my-3 font-bold hover:shadow-xl active:scale-[0.96] active:ring-2 active:ring-offset-2 active:ring-white active:ring-offset-gray-400 transition duration-150 ease-in-out">I'm flexible</button>
+      {/* <button className="text-md text-purple-500 max-w-[170px] outline-none font-semibold bg-white px-8 py-3 shadow-md rounded-full my-3 font-bold hover:shadow-xl active:scale-[0.96] active:ring-2 active:ring-offset-2 active:ring-white active:ring-offset-gray-400 transition duration-150 ease-in-out">I'm flexible</button> */}
 
 
       <div className="flex flex-wrap justify-center items-start mt-4">

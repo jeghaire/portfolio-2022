@@ -25,7 +25,7 @@ function Hero() {
         </Link>
       </div>
       <div className="hidden md:inline-flex items-center ml-auto h-[400px] w-[400px]">
-        <img src="/programming.svg" />
+        <img src="/programming.svg" alt="" />
       </div>
     </header>
   )

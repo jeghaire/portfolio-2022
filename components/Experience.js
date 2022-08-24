@@ -8,10 +8,10 @@ function classNames(...classes) {
 
 function Experience() {
   let [jobs] = useState({
-    'Apple': [{
+    'Wigxel': [{
       id: 1,
       title: 'Software Engineer',
-      company: 'Apple',
+      company: 'Wigxel Corp',
       startDate: 'June 2022',
       endDate: 'Present',
       tasks: [
@@ -21,7 +21,7 @@ function Experience() {
         },
         {
           id: 5,
-          content: 'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify'
+          content: 'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Sanity, Tailwind, Prisma, and Netlify'
         },
         {
           id: 6,
@@ -29,7 +29,7 @@ function Experience() {
         }
       ]
     }],
-    'WealthLine Nig. Ltd.': [{
+    'WealthLine': [{
       id: 1,
       title: 'IT Support',
       company: 'WealthLine Nig. Ltd.',
@@ -50,7 +50,7 @@ function Experience() {
         }
       ]
     }],
-    'SoftPoint Apps': [{
+    'SoftPoint': [{
       id: 1,
       title: 'Industrial Training',
       company: 'SoftPoint Apps',
@@ -74,10 +74,10 @@ function Experience() {
   })
 
   return (
-    <section className="flex flex-col items-center py-32 px-2">
-      <h1 className="text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Job <span className="text-base-accent">Experi</span>ence</h1>
+    <section className="flex flex-col items-center py-20 px-2">
+      <h1 className="mt-9 lg:mt-16 text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Work <span className="text-base-accent">Experience</span></h1>
       <div className="w-[90%] md:w-[80%] mt-[3rem] flex flex-row xl:w-full xl:flex-col mx-auto">
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-lg mx-auto">
           <Tab.Group vertical>
             <Tab.List className="flex space-x-1 rounded-xl bg-base-primary p-1">
               {Object.keys(jobs).map((job) => (
@@ -85,11 +85,11 @@ function Experience() {
                   key={job}
                   className={({ selected }) =>
                     classNames(
-                      'w-full rounded-lg py-2.5 px-2 text-sm font-medium leading-5 text-base-secondary truncate',
-                      'ring-white ring-opacity-60 ring-offset-2 ring-offset-base-secondary focus:outline-none focus:ring-2',
+                      'w-full rounded-lg py-2.5 px-2 text-sm font-medium font-display leading-5 text-base-secondary truncate',
+                      'ring-white ring-opacity-60 ring-offset-2 ring-offset-base-secondary outline-none',
                       selected
                         ? 'bg-white shadow'
-                        : 'text-base-brown hover:bg-white/[0.12] hover:text-base-secondary'
+                        : 'text-base-dark hover:bg-white/[0.12] hover:text-base-secondary'
                     )
                   }
                 >
@@ -103,7 +103,7 @@ function Experience() {
                   key={idx}
                   className={classNames(
                     'rounded-xl bg-white p-3',
-                    'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none'
+                    'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 outline-none'
                   )}
                 >
                   <ul>
@@ -125,7 +125,7 @@ function Experience() {
                         </ul>
                         <ul>
                           {post?.tasks.map(task => (
-                            <li key={task.id} className="mt-3 flex space-x-1 text-sm font-normal leading-4 text-gray-800 list-disk">{task.content}</li>
+                            <li key={task.id} className="mt-3 flex space-x-1 text-base font-normal leading-4 text-gray-800 list-disk">{task.content}</li>
                           ))}
                         </ul>
 
@@ -133,7 +133,7 @@ function Experience() {
                           href="#"
                           className={classNames(
                             'absolute inset-0 rounded-md',
-                            'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
+                            'ring-blue-400 focus:z-10 outline-none focus:ring-2'
                           )}
                         /> */}
                       </li>

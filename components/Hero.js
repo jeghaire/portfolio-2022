@@ -18,21 +18,14 @@ function Hero() {
             onClick={() => setToggled(false)}
           />
         </div>
-        <p className="text-3xl md:text-4xl max-w-3xl leading-none mt-3 text-black/75 lg:tracking-tighter lg:font-cursive">I create beautiful things</p>
-        <p className="block max-w-prose font-normal text-left md:text-lg py-6">I&#39;m a software engineer specializing in building beautiful experiences. Currently, I’m focused on finding a place that will allow me learn, grow and work with an amazing team.</p>
+        <p className="text-3xl md:text-4xl max-w-3xl leading-none mt-3 text-base-dark/75 font-normal font-display">I create beautiful things</p>
+        <p className="block max-w-prose text-left md:text-lg py-6 font-display">I&#39;m a software engineer specializing in building beautiful experiences. Currently, I’m focused on finding a place that will allow me learn, grow and work with an amazing team.</p>
         <Link href="mailto:jomaviprz@gmail.com?subject=New%20Job%20Offer">
-          <a className="border border-base-secondary text-base-secondary hover:text-base-secondary/80 shadow-lg transition-all duration-400 ease-in-out hover:-translate-y-[1px] hover:shadow-xl outline-none inline-block rounded-lg py-4 px-8 font-mono m-0">Hire Me!</a>
+          <a className="border border-base-secondary bg-base-secondary text-white hover:bg-base-secondary/90 shadow-lg transition-all duration-400 ease-in-out hover:-translate-y-[1px] hover:shadow-xl outline-none inline-block rounded-lg py-4 px-8 font-mono m-0 active:scale-[0.96]">Hire Me!</a>
         </Link>
       </div>
       <div className="hidden md:inline-flex items-center ml-auto h-[400px] w-[400px]">
-        <img
-          src="/programming.svg"
-          priority
-          layout="fill"
-          objectFit="contain"
-          alt=""
-          onClick={() => setToggled(false)}
-        />
+        <img src="/programming.svg" />
       </div>
     </header>
   )

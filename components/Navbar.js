@@ -51,37 +51,37 @@ export default function Navbar() {
         ))}
         <li className="ml-5">
           <Link href="/cv/Jomavi.docx" download>
-            <a className="border inline-block outline-none border-black rounded-lg py-3 px-7 hover:text-black/80 font-mono shadow hover:shadow-lg transition-all duration-400 ease-in-out">Resume</a>
+            <a className="border inline-block outline-none border-base-dark rounded-lg py-3 px-7 hover:text-base-dark/80 font-mono shadow hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]">Resume</a>
           </Link>
         </li>
       </ul>
 
       <div className="ml-auto md:hidden">
-        <BiMenu onClick={() => setToggled(true)} className="justify-end w-10 h-10 p-1.5 relative flex justify-center items-center text-base-accent border" />
+        <BiMenu onClick={() => setToggled(true)} className="justify-end w-10 h-10 p-1.5 relative flex justify-center items-center text-base-dark border" />
         {toggled && (
-          <>
+          <div className="fixed top-[10vh] right-0 bottom-0 z-10 p-3 h-[90vh] w-full bg-transparent" onClick={() => setToggled(false)}>
             <motion.div
               whileInView={{ x: [6, 0] }}
               transition={{ duration: 0.85, ease: 'easeOut' }}
               className="fixed top-0 right-0 bottom-0 z-10 p-3 w-9/12 h-screen items-end bg-white bg-[url('/images/bgWhite.png')] bg-cover bg-repeat shadow-lg"
             >
               <ul className="h-full w-full flex flex-col">
-                <BiX onClick={() => setToggled(false)} className="justify-self-center text-base-accent h-10 w-10 p-1.5 ml-auto mt-3 mb-7 mr-2 border" />
+                <BiX onClick={() => setToggled(false)} className="justify-self-center text-base-dark h-10 w-10 p-1.5 ml-auto mt-3 mb-7 mr-2 border" />
                 {navMenuOptions.map(item => (
                   <li key={`link-${item}`} onClick={() => setToggled(false)}>
                     <Link href={`#${item}`}>
-                      <a className="block w-full h-full p-4 outline-none text-sm uppercase transition duration-300 ease-in-out">{item}</a>
+                      <a className="block w-full h-full p-4 outline-none font-mono text-sm uppercase transition duration-300 ease-in-out">{item}</a>
                     </Link>
                   </li>
                 ))}
                 <li className="mt-5" onClick={() => setToggled(false)}>
                   <Link href="/cv/Jomavi.docx" download>
-                    <a className="border inline-block outline-none border-black rounded-lg py-3 px-7 text-base font-mono hover:text-black/80 shadow-md transition-all duration-400 ease-in-out">Resume</a>
+                    <a className="border inline-block outline-none border-base-dark rounded-lg py-3 px-7 text-base font-mono hover:text-base-dark/80 shadow-md transition-all duration-400 ease-in-out active:scale-[0.96]">Resume</a>
                   </Link>
                 </li>
               </ul>
             </motion.div>
-          </>
+          </div>
         )}
       </div>
     </nav >

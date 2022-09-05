@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         base: {
-          'primary': '#f3f4f6',//'#f6f9fc', //'#edf2f8',
+          // 'primary': '#f3f4f6', //'#f6f9fc', //'#edf2f8',
+          'primary': '#F8FAFC',
           'accent': '#243c5a',
-          'secondary': '#313bac', //'#6772e5',
+          'secondary': '#313bac',
           'dark': '#030303',
           'light-gray': '#e4e4e4',
           'dark-gray': '#6b7c93',
@@ -19,7 +20,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['PT sans', ...fontFamily.sans],
-        mono: ['Fira Code', ...fontFamily.mono],
+        mono: ['SF Mono', 'Fira Code', ...fontFamily.mono],
         serif: ['Cooper Std', ...fontFamily.serif],
         display: 'NeueMontreal',
       }

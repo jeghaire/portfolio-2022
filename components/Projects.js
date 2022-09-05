@@ -8,7 +8,7 @@ import { urlFor, configuredSanityClient } from '../sanity/client'
 const Projects = () => {
   const [works, setWorks] = useState([])
   const [filterWork, setFilterWork] = useState([])
-  const [activeFilter, setActiveFilter] = useState('All')
+  const [activeFilter, setActiveFilter] = useState('Next.js')
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
 
   useEffect(() => {
@@ -36,16 +36,15 @@ const Projects = () => {
   };
 
   return (
-    <section className="flex flex-col items-center py-20 px-2">
-      <h1 className="absolute about_title">My Projects</h1>
+    <section id="projects" className="flex flex-col items-center py-20 px-2 border-b">
       <h1 className="mt-9 lg:mt-16 text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">My <span className="text-base-accent">Projects</span></h1>
 
       <div className="flex flex-row justify-center items-center flex-wrap m-0 mt-12 mb-3">
-        {['All', 'UI/UX', 'Web App', 'Mobile App', 'React JS', 'Next.js'].map((item, index) => (
+        {['All', 'UI/UX', 'Web App', 'Firebase', 'React.js', 'Next.js', 'Express.js'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
-            className={`py-2.5 px-4 rounded-lg bg-white border text-base-dark font-mono cursor-pointer transition-all duration-300 ease m-1 2xl:py-2 px-4 rounded-lg flex items-center justify-center text-xs text-left text-base-dark-gray 2xl:text-sm hover:ring-1 hover:ring-offset-0 hover:ring-base-secondary ${activeFilter === item ? 'bg-base-secondary text-white font-bold tracking-wide ring-1 ring-offset-0 ring-base-secondary' : ''}`}
+            className={`py-2.5 px-4 rounded-lg bg-white border text-base-dark font-mono cursor-pointer transition-all duration-300 ease m-1 2xl:py-2 px-4 rounded-lg flex items-center justify-center text-xs text-left text-base-dark-gray 2xl:text-sm hover:ring-1 hover:ring-offset-0 hover:ring-base-secondary ${activeFilter === item ? 'bg-base-secondary !text-white tracking-wide ring-1 ring-offset-0 ring-base-secondary' : ''}`}
           >
             {item}
           </div>

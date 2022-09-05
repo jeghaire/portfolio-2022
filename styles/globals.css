@@ -57,7 +57,7 @@
   }
 
   body {
-    @apply bg-white font-sans snap-y snap-mandatory snap-always;
+    @apply bg-white font-sans;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -67,19 +67,11 @@
     @apply font-serif;
   }
 
-  header {
-    @apply min-h-[88vh];
-  }
-
   section {
-    @apply min-h-screen w-full relative snap-start;
+    @apply min-h-screen w-full relative;
   }
-}
 
-.about_title {
-  font-size: calc(2vw + 2rem);
-  font-weight: 900;
-  color: rgba(0, 0, 0, 0.1);
-  letter-spacing: 2px;
-  text-align: center;
+  .active {
+    @apply !text-base-secondary cursor-default;
+  }
 }

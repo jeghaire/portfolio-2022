@@ -119,7 +119,7 @@ export default function Navbar() {
       </ul>
 
       <div className="ml-auto md:hidden">
-        <BiMenu onClick={() => setToggled(true)} className="justify-end w-10 h-10 p-1.5 relative flex justify-center items-center text-base-dark border" />
+        <BiMenu onClick={() => setToggled(true)} className="justify-end w-10 h-10 p-1.5 relative flex justify-center items-center text-base-dark border border-base-dark" />
         {toggled && (
           <div className="fixed top-[10vh] right-0 bottom-0 z-10 p-3 h-[90vh] w-full bg-transparent" onClick={() => setToggled(false)}>
             <motion.div
@@ -128,7 +128,7 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 z-10 p-3 w-9/12 h-screen items-end bg-white bg-[url('/images/bgWhite.png')] bg-cover bg-repeat shadow-lg"
             >
               <ul className="h-full w-full flex flex-col">
-                <BiX onClick={() => setToggled(false)} className="justify-self-center text-base-dark h-10 w-10 p-1.5 ml-auto mt-3 mb-7 mr-2 border" />
+                <BiX onClick={() => setToggled(false)} className="justify-self-center text-base-dark h-10 w-10 p-1.5 ml-auto mt-3 mb-7 mr-2 border border-base-dark" />
                 {navMenuOptions.map(item => (
                   <li key={`link-${item}`} onClick={() => setToggled(false)}>
                     <Link href={`#${item}`}>

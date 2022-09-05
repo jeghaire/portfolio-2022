@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function Hero() {
   return (
-    <header className="flex flex-col md:flex-row justify-center md:justify-start items-center w-full py-32 md:py-40 px-5 md:px-28 border-b">
+    <header className="flex flex-col md:flex-row justify-center md:justify-start items-center w-full py-40 px-5 md:px-28 border-b">
       <div className="text-left">
         <p className="font-mono text-base md:text-lg leading-none mb-4">Hi, my name is</p>
         <div className="relative h-24 w-72 lg:h-28 lg:w-[22rem] flex items-center">

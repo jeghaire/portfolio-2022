@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Tab } from '@headlessui/react'
 import { AppWrap, MotionWrap } from '../wrappers'
-import { urlFor, configuredSanityClient } from '../sanity/client'
+import { configuredSanityClient } from '../sanity/client'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -13,6 +13,7 @@ function Experience() {
     const query = '*[_type=="experiences"]'
 
     configuredSanityClient.fetch(query).then((data) => {
+      data.sort((a, b) => { return b.sn - a.sn })
       setJobs(data);
     })
   }, [])

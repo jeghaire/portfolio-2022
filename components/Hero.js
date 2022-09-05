@@ -17,9 +17,10 @@ function Hero() {
             onClick={() => setToggled(false)}
           />
         </div>
+        <p className="text-3xl md:text-4xl max-w-3xl leading-none mt-3 text-base-dark/75">I create beautiful things</p>
         <p className="block max-w-prose text-left md:text-lg py-6 font-display">I&#39;m a software engineer specializing in building beautiful experiences. Currently, I’m focused on finding a place that will allow me learn, grow and work with an amazing team.</p>
         <Link href="mailto:jomaviprz@gmail.com?subject=New%20Job%20Offer">
-          <a className="bg-base-dark text-white hover:bg-opacity-90 rounded-md shadow-lg transition-all duration-400 ease-in-out hover:-translate-y-[1px] hover:shadow-xl outline-none inline-block py-4 px-8 font-mono m-0 active:scale-[0.96]">Hire Me!</a>
+          <a className="bg-base-dark bg-[#334155] text-white hover:bg-opacity-90 rounded-md shadow-lg transition-all duration-400 ease-in-out hover:-translate-y-[1px] hover:shadow-xl outline-none inline-block py-4 px-8 font-mono m-0 active:scale-[0.96]">Hire Me!</a>
         </Link>
 
         {/* bg-[#334155] hover:bg-white hover:text-base-dark */}

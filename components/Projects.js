@@ -30,7 +30,7 @@ const Projects = () => {
       if (item === 'All') {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(works.filter((work) => work?.tags?.includes(item)));
       }
     }, 500);
   };
@@ -61,14 +61,14 @@ const Projects = () => {
             <div
               className="relative flex items-center justify-center w-full h-[230px] 2xl:h-[350px]"
             >
-              <img src={urlFor(work.imgUrl)} alt={work.name} className="h-full w-full h-76 w-76 rounded-xl object-cover" />
+              <img src={urlFor(work?.imgUrl)} alt={work?.name} className="h-full w-full h-76 w-76 rounded-xl object-cover" />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-base-dark/25 rounded-lg opacity-0 transition-all duration-300 ease flex items-center justify-center"
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <a href={work?.projectLink} target="_blank" rel="noreferrer">
 
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
@@ -79,7 +79,7 @@ const Projects = () => {
                     <AiFillEye className="w-1/2 h-1/2 text-white" />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="noreferrer">
+                <a href={work?.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.90] }}
@@ -93,11 +93,11 @@ const Projects = () => {
             </div>
 
             <div className="p-1 w-full relative flex-col flex items-center justify-center">
-              <h4 className="text-sm sm:text-base md:text-lg font-bold text-left text-base-dark mt-3">{work.title}</h4>
-              <p className="text-sm 2xl:text-sm  text-left text-base-dark-gray">{work.description}</p>
+              <h4 className="text-sm sm:text-base md:text-lg font-bold text-left text-base-dark mt-3">{work?.title}</h4>
+              <p className="text-sm 2xl:text-sm  text-left text-base-dark-gray">{work?.description}</p>
 
               <div className="absolute py-2 px-4 rounded-t-md bg-white text-xs -top-[22px] flex items-center justify-center">
-                <p className="text-xs text-left text-base-dark-gray 2xl:text-sm">{work.tags[0]}</p>
+                <p className="text-xs text-left text-base-dark-gray 2xl:text-sm">{work.tags && work?.tags[0]}</p>
               </div>
             </div>
           </div>

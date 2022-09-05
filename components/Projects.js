@@ -110,5 +110,5 @@ const Projects = () => {
 export default AppWrap(
   MotionWrap(Projects, 'flex-1 flex-col w-full'),
   'projects',
-  'bg-base-primary'
+  'bg-white'
 )

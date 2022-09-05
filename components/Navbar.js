@@ -113,7 +113,7 @@ export default function Navbar() {
         ))}
         <li className="ml-5">
           <Link href="/cv/Jomavi.pdf" download>
-            <a className="border border-base-dark inline-block outline-none rounded-lg py-3 px-7 hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]">Resume</a>
+            <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 text-black hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]">Resume</a>
           </Link>
         </li>
       </ul>
@@ -138,7 +138,7 @@ export default function Navbar() {
                 ))}
                 <li className="mt-5" onClick={() => setToggled(false)}>
                   <Link href="/cv/Jomavi.pdf" download>
-                    <a className="border border-base-dark inline-block outline-none rounded-lg py-3 px-7 font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]">Resume</a>
+                    <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]">Resume</a>
                   </Link>
                 </li>
               </ul>

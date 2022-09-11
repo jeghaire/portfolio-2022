@@ -20,7 +20,7 @@ function Experience() {
 
   return (
     <section id="experience" className="flex flex-col items-center py-20 px-2">
-      <h1 className="mt-9 lg:mt-16 text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">Work <span className="text-base-accent">Experience</span></h1>
+      <h1 className="mt-9 lg:mt-16 text-4xl md:text-5xl font-extrabold capitalize tracking-tight text-center">Work <span className="text-base-accent">Experience</span></h1>
       <div className="w-[90%] md:w-[80%] mt-[3rem] flex flex-row xl:w-full xl:flex-col mx-auto">
 
         <div className="w-full max-w-lg mx-auto">
@@ -35,7 +35,7 @@ function Experience() {
                       'ring-white ring-opacity-60 ring-offset-2 ring-offset-base-secondary outline-none',
                       selected
                         ? 'bg-white shadow'
-                        : 'text-base-dark hover:bg-white/[0.12] hover:text-base-secondary'
+                        : 'hover:bg-white/[0.45]'
                     )
                   }
                 >

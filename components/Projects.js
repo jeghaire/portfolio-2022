@@ -8,7 +8,7 @@ import { urlFor, configuredSanityClient } from '../sanity/client'
 const Projects = () => {
   const [works, setWorks] = useState([])
   const [filterWork, setFilterWork] = useState([])
-  const [activeFilter, setActiveFilter] = useState('Next.js')
+  const [activeFilter, setActiveFilter] = useState('All')
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const Projects = () => {
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
-            className={`py-2.5 px-4 rounded-lg bg-white border text-base-dark font-mono cursor-pointer transition-all duration-300 ease m-1 2xl:py-2 px-4 rounded-lg flex items-center justify-center text-xs text-left text-base-dark-gray 2xl:text-sm hover:ring-1 hover:ring-offset-0 hover:ring-base-secondary ${activeFilter === item ? 'bg-base-secondary !text-white tracking-wide ring-1 ring-offset-0 ring-base-secondary' : ''}`}
+            className={`py-2.5 px-4 rounded-lg bg-white border text-base-dark font-mono cursor-pointer transition-all duration-300 ease m-1 2xl:py-2 px-4 rounded-lg flex items-center justify-center text-xs text-left 2xl:text-sm hover:ring-1 hover:ring-offset-0 hover:ring-base-secondary ${activeFilter === item ? 'bg-base-secondary !text-white tracking-wide ring-1 ring-offset-0 ring-base-secondary' : ''}`}
           >
             {item}
           </div>
@@ -93,8 +93,8 @@ const Projects = () => {
             </div>
 
             <div className="p-1 w-full relative flex-col flex items-center justify-center">
-              <h4 className="text-sm sm:text-base md:text-lg font-bold text-left text-base-dark mt-3">{work?.title}</h4>
-              <p className="text-sm 2xl:text-sm  text-left text-base-dark-gray">{work?.description}</p>
+              <h4 className="text-base md:text-lg font-bold text-left text-base-dark mt-3">{work?.title}</h4>
+              <p className="text-xs md:text-sm text-left">{work?.description}</p>
 
               <div className="absolute py-2 px-4 rounded-t-md bg-white text-xs -top-[22px] flex items-center justify-center">
                 <p className="text-xs text-left text-base-dark-gray 2xl:text-sm">{work.tags && work?.tags[0]}</p>

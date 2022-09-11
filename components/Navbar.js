@@ -25,7 +25,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', navbarChange)
   }, [])
 
-  //Hide nav on scroll down
   useEffect(() => {
     var prevScrollpos = window.pageYOffset
     const handleHideNavbar = () => {
@@ -42,39 +41,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', hideNavbar)
   }, [])
 
-  //Dynamically update nav to reflect new section
   useEffect(() => {
-    // Get all sections that have an ID defined
     const sections = document.querySelectorAll("section[id]");
-
-    // Add an event listener listening for scroll
     window.addEventListener("scroll", navHighlighter);
 
     function navHighlighter() {
-
-      // Get current scroll position
       let scrollY = window.pageYOffset;
 
-      // Now we loop through sections to get height, top and ID values for each
       sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
-
-        // Original:
-        // const sectionTop = current.offsetTop - 50;
-        //
-        // Alex Turnwall's update:
-        // Updated original line (above) to use getBoundingClientRect instead of offsetTop, based on:
-        // https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/
-        // https://newbedev.com/difference-between-getboundingclientrect-top-and-offsettop
-        // This allows the use of sections inside a relative parent, which I'm not using here, but needed for a project
-        //
         const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
         var sectionId = current.getAttribute("id");
 
-        /*
-        - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-        - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-        */
         if (
           scrollY > sectionTop &&
           scrollY <= sectionTop + sectionHeight
@@ -88,10 +66,9 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav id="nav" className={`navigation flex items-center py-4 px-5 md:px-28 border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100] ${colorChange && `shadow-sm border-b ${hideNav && 'md:transition-all md:duration-300 md:ease-in-out md:-top-28'}`}`}>
-      {/* <nav id="nav" className={`navigation flex items-center py-5 px-5 md:px-28 border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100] ${colorChange && `shadow-sm border-b`}`}> */}
+    <nav id="nav" className={`navigation flex items-center py-4 px-5 md:px-28 border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100] ${colorChange && `shadow-sm border-b ${hideNav && 'transition-all duration-300 ease-in-out -top-28'}`}`}>
       <Link href="/">
-        <a className="relative h-8 w-20 md:h-8 md:w-32 flex items-center outline-none">
+        <a className="relative h-8 w-20 md:h-8 md:w-28 flex items-center outline-none">
           <Image
             priority
             src="/images/jomavi.png"
@@ -112,9 +89,7 @@ export default function Navbar() {
           </li>
         ))}
         <li className="ml-5">
-          <Link href="/cv/Jomavi.pdf" download>
-            <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 text-black hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]">Resume</a>
-          </Link>
+          <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 text-black hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
         </li>
       </ul>
 
@@ -137,9 +112,7 @@ export default function Navbar() {
                   </li>
                 ))}
                 <li className="mt-5" onClick={() => setToggled(false)}>
-                  <Link href="/cv/Jomavi.pdf" download>
-                    <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]">Resume</a>
-                  </Link>
+                  <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
                 </li>
               </ul>
             </motion.div>

@@ -84,6 +84,21 @@
   }
 
   .active {
-    @apply !text-base-secondary cursor-default;
+    @apply md:underline md:decoration-base-secondary md:underline-offset-2;
+  }
+
+  @media only screen and (min-width: 768px) {
+    nav a {
+      @apply relative;
+    }
+
+    nav a:after {
+      @apply content-[''] absolute bottom-0 left-0 w-0 border-base-secondary border-b;
+      transition: 0.4s;
+    }
+
+    nav a[href*='#']:hover:after {
+      @apply w-full;
+    }
   }
 }

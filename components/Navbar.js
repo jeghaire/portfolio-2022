@@ -66,7 +66,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav id="nav" className={`navigation flex items-center py-4 px-5 md:px-28 border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100] ${colorChange && `shadow-sm border-b ${hideNav && 'transition-all duration-300 ease-in-out -top-28'}`}`}>
+    <nav className={`navigation flex items-center py-4 px-5 md:px-28 border-white/25 w-full bg-white/25 backdrop-blur-md sticky top-0 z-[100] ${colorChange && `shadow-sm border-b ${hideNav && 'transition-all duration-300 ease-in-out -top-28'}`}`}>
       <Link href="/">
         <a className="relative h-8 w-20 md:h-8 md:w-28 flex items-center outline-none">
           <Image
@@ -80,16 +80,16 @@ export default function Navbar() {
         </a>
       </Link>
       <ul className="hidden md:flex items-center ml-auto">
-        {navMenuOptions.map(item => (
+        {navMenuOptions.map((item, idx) => (
           <li key={`link-${item}`} className="ml-5">
             <div />
             <Link href={`#${item}`}>
-              <a className="hover:text-base-accent outline-none text-sm font-mono capitalize transition duration-300 ease-in-out">{item}</a>
+              <a className="outline-none text-sm font-mono capitalize">{item}</a>
             </Link>
           </li>
         ))}
         <li className="ml-5">
-          <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 text-black hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
+          <a className="border border-base-dark inline-block outline-none rounded py-2.5 px-6 text-black hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
         </li>
       </ul>
 
@@ -107,12 +107,12 @@ export default function Navbar() {
                 {navMenuOptions.map(item => (
                   <li key={`link-${item}`} onClick={() => setToggled(false)}>
                     <Link href={`#${item}`}>
-                      <a className="block w-full h-full p-4 outline-none text-sm uppercase transition duration-300 ease-in-out">{item}</a>
+                      <a className="block w-full h-full p-4 outline-none text-[0.8rem] font-mono uppercase transition duration-300 ease-in-out">{item}</a>
                     </Link>
                   </li>
                 ))}
                 <li className="mt-5" onClick={() => setToggled(false)}>
-                  <a className="border border-base-dark inline-block outline-none rounded-lg py-2.5 px-6 font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
+                  <a className="border border-base-dark inline-block outline-none rounded py-2.5 px-6 text-[0.96rem] font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
                 </li>
               </ul>
             </motion.div>

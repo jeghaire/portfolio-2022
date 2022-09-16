@@ -6,6 +6,11 @@ import { useState, useEffect } from 'react'
 
 const navMenuOptions = ['about', 'projects', 'experience', 'contact']
 
+const linksVariants = {
+  hidden: { y: -40 },
+  visible: { y: 0 },
+}
+
 export default function Navbar() {
   const [toggled, setToggled] = useState(false)
   const [colorChange, setColorchange] = useState(false)
@@ -79,18 +84,29 @@ export default function Navbar() {
           />
         </a>
       </Link>
-      <ul className="hidden md:flex items-center ml-auto">
+      <ul className="hidden md:flex items-center ml-auto"      >
         {navMenuOptions.map((item, idx) => (
-          <li key={`link-${item}`} className="ml-5">
+          <motion.li
+            variants={linksVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: idx => idx + 100 }}
+            key={`link-${item}`}
+            className="ml-5">
             <div />
             <Link href={`#${item}`}>
               <a className="outline-none text-sm font-mono capitalize">{item}</a>
             </Link>
-          </li>
+          </motion.li>
         ))}
-        <li className="ml-5">
+        <motion.li
+          variants={linksVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.2 }}
+          className="ml-5">
           <a className="border border-base-dark inline-block outline-none rounded py-2.5 px-6 text-black hover:text-base-dark/80 font-mono hover:shadow-lg transition-all duration-400 ease-in-out active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
-        </li>
+        </motion.li>
       </ul>
 
       <div className="ml-auto md:hidden">

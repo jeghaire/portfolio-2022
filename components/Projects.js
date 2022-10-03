@@ -8,7 +8,7 @@ import { urlFor, configuredSanityClient } from '../sanity/client'
 const Projects = () => {
   const [works, setWorks] = useState([])
   const [filterWork, setFilterWork] = useState([])
-  const [activeFilter, setActiveFilter] = useState('All')
+  const [activeFilter, setActiveFilter] = useState('Next.js')
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="flex flex-col items-center py-20 px-2 md:border-b">
-      <h1 className="mt-9 lg:mt-16 text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">My <span className="text-base-accent">Projects</span></h1>
+      <h1 className="mt-9 lg:mt-16 text-4xl md:text-5xl text-base-dark font-extrabold capitalize tracking-tight text-center">My Projects</h1>
 
       <div className="flex flex-row justify-center items-center flex-wrap m-0 mt-12 mb-3">
         {['All', 'UI/UX', 'Web App', 'Firebase', 'React.js', 'Next.js', 'Express.js'].map((item, index) => (

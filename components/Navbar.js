@@ -128,7 +128,7 @@ export default function Navbar() {
                   </li>
                 ))}
                 <li className="mt-5" onClick={() => setToggled(false)}>
-                  <a className="border border-base-dark inline-block outline-none rounded py-2.5 px-6 text-[0.96rem] font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
+                  <a className="border border-base-dark inline-block outline-none rounded py-2.5 px-6 text-sm font-mono transition-all duration-400 ease-in-out hover:bg-opacity-90 active:scale-[0.96]" href="/cv/Jomavi.pdf" download>Resume</a>
                 </li>
               </ul>
             </motion.div>

@@ -63,7 +63,7 @@ function Hero() {
             transition={{ delay: 1.2, duration: 0.5 }}
           >
             <Link href="mailto:jomaviprz@gmail.com?subject=New%20Job%20Offer">
-              <a className="bg-base-dark text-white hover:bg-opacity-90 cursor-pointer rounded-md shadow-lg transition-all duration-400 ease-in-out hover:-translate-y-[1px] hover:shadow-xl outline-none inline-block py-4 px-8 font-mono m-0 active:scale-[0.96]">
+              <a className="bg-base-dark text-white hover:bg-opacity-90 cursor-pointer rounded shadow-lg transition-all duration-400 ease-in-out hover:-translate-y-[1px] hover:shadow-xl outline-none inline-block py-4 px-8 font-mono m-0 active:scale-[0.96]">
                 Hire Me!
               </a>
             </Link>
